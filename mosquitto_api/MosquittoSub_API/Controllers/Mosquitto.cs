@@ -6,7 +6,7 @@ namespace MosquittoSub_API.Controllers
     [ApiController]
     public class Mosquitto : ControllerBase
     {
-        public readonly IMem _mem;
+        private readonly IMem _mem;
         public Mosquitto(IMem mem)
         {
             _mem = mem;

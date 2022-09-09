@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MosquittoSub_API.SignalR;
 using MQTTnet.Client.Options;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,8 @@ namespace MosquittoSub_API
         {
 
             services.AddControllers();
+            services.AddSignalR();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MosquittoSub_API", Version = "v1" });
@@ -54,6 +57,8 @@ namespace MosquittoSub_API
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+
+                endpoints.MapHub<WebSocketServer>("/server");
             });
         }
     }

@@ -90,11 +90,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PROJECTS\\Faculdade\\MQTT_Sub\\MQTT_Sub\\MQTT_Sub.csproj",
+      "projectUniqueName": "D:\\PROJECTS\\Faculdade\\MQTT_Sub\\mosquitto_subscriber\\MQTT_Sub\\MQTT_Sub.csproj",
       "projectName": "MQTT_Sub",
-      "projectPath": "D:\\PROJECTS\\Faculdade\\MQTT_Sub\\MQTT_Sub\\MQTT_Sub.csproj",
+      "projectPath": "D:\\PROJECTS\\Faculdade\\MQTT_Sub\\mosquitto_subscriber\\MQTT_Sub\\MQTT_Sub.csproj",
       "packagesPath": "C:\\Users\\Aron\\.nuget\\packages\\",
-      "outputPath": "D:\\PROJECTS\\Faculdade\\MQTT_Sub\\MQTT_Sub\\obj\\",
+      "outputPath": "D:\\PROJECTS\\Faculdade\\MQTT_Sub\\mosquitto_subscriber\\MQTT_Sub\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Aron\\AppData\\Roaming\\NuGet\\NuGet.Config",

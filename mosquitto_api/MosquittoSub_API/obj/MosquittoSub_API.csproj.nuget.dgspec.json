@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PROJECTS\\Faculdade\\MosquittoSub_API\\MosquittoSub_API\\MosquittoSub_API.csproj": {}
+    "D:\\PROJECTS\\Faculdade\\MQTT_Sub\\mosquitto_api\\MosquittoSub_API\\MosquittoSub_API.csproj": {}
   },
   "projects": {
-    "D:\\PROJECTS\\Faculdade\\MosquittoSub_API\\MosquittoSub_API\\MosquittoSub_API.csproj": {
+    "D:\\PROJECTS\\Faculdade\\MQTT_Sub\\mosquitto_api\\MosquittoSub_API\\MosquittoSub_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROJECTS\\Faculdade\\MosquittoSub_API\\MosquittoSub_API\\MosquittoSub_API.csproj",
+        "projectUniqueName": "D:\\PROJECTS\\Faculdade\\MQTT_Sub\\mosquitto_api\\MosquittoSub_API\\MosquittoSub_API.csproj",
         "projectName": "MosquittoSub_API",
-        "projectPath": "D:\\PROJECTS\\Faculdade\\MosquittoSub_API\\MosquittoSub_API\\MosquittoSub_API.csproj",
+        "projectPath": "D:\\PROJECTS\\Faculdade\\MQTT_Sub\\mosquitto_api\\MosquittoSub_API\\MosquittoSub_API.csproj",
         "packagesPath": "C:\\Users\\Aron\\.nuget\\packages\\",
-        "outputPath": "D:\\PROJECTS\\Faculdade\\MosquittoSub_API\\MosquittoSub_API\\obj\\",
+        "outputPath": "D:\\PROJECTS\\Faculdade\\MQTT_Sub\\mosquitto_api\\MosquittoSub_API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Aron\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,10 @@
             "MQTTnet": {
               "target": "Package",
               "version": "[3.1.2, )"
+            },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.1.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
