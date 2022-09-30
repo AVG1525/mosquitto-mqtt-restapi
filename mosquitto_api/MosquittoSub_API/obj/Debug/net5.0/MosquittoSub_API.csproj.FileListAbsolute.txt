@@ -58,3 +58,4 @@ D:\PROJECTS\Faculdade\MQTT_Sub\mosquitto_api\MosquittoSub_API\obj\Debug\net5.0\r
 D:\PROJECTS\Faculdade\MQTT_Sub\mosquitto_api\MosquittoSub_API\obj\Debug\net5.0\MosquittoSub_API.pdb
 D:\PROJECTS\Faculdade\MQTT_Sub\mosquitto_api\MosquittoSub_API\obj\Debug\net5.0\MosquittoSub_API.genruntimeconfig.cache
 D:\PROJECTS\Faculdade\MQTT_Sub\mosquitto_api\MosquittoSub_API\obj\Debug\net5.0\ref\MosquittoSub_API.dll
+D:\PROJECTS\Faculdade\MQTT_Sub\mosquitto_api\MosquittoSub_API\bin\Debug\net5.0\RestSharp.dll
