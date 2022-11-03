@@ -6,6 +6,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MosquittoSub_API.Consumers;
+using MosquittoSub_API.Domain;
 using MosquittoSub_API.SignalR;
 using MQTTnet.Client.Options;
 using System;
@@ -30,6 +32,9 @@ namespace MosquittoSub_API
 
             services.AddControllers();
             services.AddSignalR();
+
+            services.Configure<RabbitMqConfiguration>(Configuration.GetSection("RabbitMqConfig"));
+            services.AddHostedService<ProcessMessageConsumer>();
 
             services.AddSwaggerGen(c =>
             {

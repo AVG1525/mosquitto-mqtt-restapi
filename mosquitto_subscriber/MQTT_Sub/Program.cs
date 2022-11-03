@@ -2,6 +2,7 @@
 using MQTTnet.Client;
 using MQTTnet.Client.Options;
 using Newtonsoft.Json;
+using RabbitMQ.Client;
 using System;
 using System.Net.Http;
 using System.Text;
@@ -45,16 +46,42 @@ namespace MQTT_Sub
                         string payload = Encoding.UTF8.GetString(e.ApplicationMessage.Payload);
                         Console.WriteLine($"Topic: {topic}. Message Received: {payload}");
 
-                        var httpClient = new HttpClient();
+                        /*var httpClient = new HttpClient();
 
                         var pay = new StringContent(JsonConvert.SerializeObject(payload), Encoding.UTF8, "application/json");
 
 
                         var response = await httpClient.PostAsync(
                             "http://localhost:5000/api/Mosquitto", 
-                            pay);
+                            pay);*/
+
+                        // Console.WriteLine($"Response status code: {response.StatusCode}");
+                        var factory = new ConnectionFactory() {
+                            HostName = "localhost"
+                        };
+                        //var factory = new ConnectionFactory();
+                        //factory.Uri = new Uri("amqp://guest:guest@localhost:5672");
+
+                        using var connection = factory.CreateConnection();
+                        using var channel = connection.CreateModel();
+                        channel.QueueDeclare(queue: "task_queue",
+                                             durable: true,
+                                             exclusive: false,
+                                             autoDelete: false,
+                                             arguments: null);
+
+                        var message = payload;
+                        var body = Encoding.UTF8.GetBytes(message);
+
+                        var properties = channel.CreateBasicProperties();
+                        properties.Persistent = true;
+
+                        channel.BasicPublish(exchange: "",
+                                             routingKey: "task_queue",
+                                             basicProperties: properties,
+                                             body: body);
                         
-                        Console.WriteLine($"Response status code: {response.StatusCode}");
+                        Console.WriteLine(" [x] Sent {0}", message);
                     }
                 }
                 catch (Exception ex)

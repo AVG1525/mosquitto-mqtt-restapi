@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "dHIG/EGMGa3eRpiWmyhvXvRKc/B5m57Z7lHSHSYka9TaBSar10J2tXxxD6d6DQwIQePmnEs+FfIyQ6F7sFxTcw==",
+  "dgSpecHash": "A7sEydARPUq74fNeCWQxpeAWEB5oRzqs4KUJRHwXC3SsMS6TZJa5akXiVEos4W7oVhLMRN8CRlT8EshZ+/Y8nA==",
   "success": true,
   "projectFilePath": "D:\\PROJECTS\\Faculdade\\MQTT_Sub\\mosquitto_subscriber\\MQTT_Sub\\MQTT_Sub.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aron\\.nuget\\packages\\mqttnet\\3.1.2\\mqttnet.3.1.2.nupkg.sha512",
-    "C:\\Users\\Aron\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\Aron\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Aron\\.nuget\\packages\\rabbitmq.client\\6.4.0\\rabbitmq.client.6.4.0.nupkg.sha512",
+    "C:\\Users\\Aron\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Aron\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512"
   ],
   "logs": []
 }

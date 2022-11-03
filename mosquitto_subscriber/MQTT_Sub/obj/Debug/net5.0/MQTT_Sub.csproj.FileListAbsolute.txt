@@ -36,3 +36,4 @@ D:\PROJECTS\Faculdade\MQTT_Sub\mosquitto_subscriber\MQTT_Sub\obj\Debug\net5.0\re
 D:\PROJECTS\Faculdade\MQTT_Sub\mosquitto_subscriber\MQTT_Sub\obj\Debug\net5.0\MQTT_Sub.pdb
 D:\PROJECTS\Faculdade\MQTT_Sub\mosquitto_subscriber\MQTT_Sub\obj\Debug\net5.0\MQTT_Sub.genruntimeconfig.cache
 D:\PROJECTS\Faculdade\MQTT_Sub\mosquitto_subscriber\MQTT_Sub\obj\Debug\net5.0\ref\MQTT_Sub.dll
+D:\PROJECTS\Faculdade\MQTT_Sub\mosquitto_subscriber\MQTT_Sub\bin\Debug\net5.0\RabbitMQ.Client.dll
