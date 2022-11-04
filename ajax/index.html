@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>Ajax</title>
+</head>
+
+<body onload="loadDefFrame()">
+    <h3 id="req"></h3>
+    <script>
+        var url = "http://localhost:2100/values";
+
+        function loadDefFrame() {
+            setTimeout(function () {
+                timer();
+            }, 3000)
+        };
+
+        function timer() {
+            fetch(url)
+                .then((data) => {
+                    return data.json();
+                }).then((res) => {
+                    console.log(res);
+                    document.getElementById("req").innerHTML = JSON.stringify(res);
+                    loadDefFrame();
+                }).catch(err => {
+                    console.log(err);
+                    document.getElementById("req").innerHTML = err;
+                    loadDefFrame();
+                })
+        };
+    </script>
+</body>
+
+</html>
