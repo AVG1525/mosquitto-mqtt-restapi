@@ -33,6 +33,16 @@ namespace MosquittoSub_API
             services.AddControllers();
             services.AddSignalR();
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("SignalRClientPolicy", policy =>
+                {
+                    policy.AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowAnyOrigin();
+                });
+            });
+
             services.Configure<RabbitMqConfiguration>(Configuration.GetSection("RabbitMqConfig"));
             services.AddHostedService<ProcessMessageConsumer>();
 
@@ -55,6 +65,8 @@ namespace MosquittoSub_API
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MosquittoSub_API v1"));
             }
 
+            app.UseCors("SignalRClientPolicy");
+
             app.UseRouting();
 
             app.UseAuthorization();
@@ -63,7 +75,7 @@ namespace MosquittoSub_API
             {
                 endpoints.MapControllers();
 
-                endpoints.MapHub<WebSocketServer>("/server");
+                endpoints.MapHub<WebSocketServer>("server");
             });
         }
     }
